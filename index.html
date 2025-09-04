@@ -304,7 +304,111 @@
         .card-content li {
             margin-bottom: 0.5rem;
         }
+        .video-section {
+            margin-bottom: 30px;
+        }
         
+        .section-title {
+            color: var(--azul);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-wrapper iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+            border: none;
+        }
+        
+        .video-info {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .video-title {
+            color: var(--naranja);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .video-description {
+            color: var(--gris-oscuro);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .youtube-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #FF0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .youtube-link:hover {
+            background-color: #CC0000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .youtube-link i {
+            margin-right: 8px;
+        }
+        @media (max-width: 900px) {
+            .video-wrapper iframe {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .video-wrapper iframe {
+                height: 350px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .video-title {
+                font-size: 20px;
+            }
+            
+            .video-description {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .video-wrapper iframe {
+                height: 250px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
         .impact {
             background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
             color: white;
@@ -518,7 +622,6 @@
                 font-size: 1.2rem;
             }
             
-        
             .section-title h2 {
                 font-size: 2.2rem;
             }
@@ -535,121 +638,26 @@
             .cta-form input {
                 width: 100%;
             }
+            .video-container {
+                max-width: 90%;
+            }
             
-        
-            
-        }
-        .video-section {
-            margin-bottom: 30px;
-        }
-        
-        .section-title {
-            color: var(--azul);
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 28px;
-        }
-        
-        .video-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-        
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .video-wrapper iframe {
-            width: 100%;
-            height: 450px;
-            display: block;
-            border: none;
-        }
-        
-        .video-info {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .video-title {
-            color: var(--naranja);
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-        
-        .video-description {
-            color: var(--gris-oscuro);
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        
-        .youtube-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #FF0000;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        
-        .youtube-link:hover {
-            background-color: #CC0000;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .youtube-link i {
-            margin-right: 8px;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: var(--gris-oscuro);
-            color: white;
-        }
-        
-        @media (max-width: 900px) {
-            .video-wrapper iframe {
-                height: 400px;
+            .play-button {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
             }
         }
         
-        @media (max-width: 768px) {
-            .video-wrapper iframe {
-                height: 350px;
+        @media (max-width: 600px) {
+            .play-button {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
             }
             
-            .section-title {
-                font-size: 24px;
-            }
-            
-            .video-title {
-                font-size: 20px;
-            }
-            
-            .video-description {
-                font-size: 16px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .video-wrapper iframe {
-                height: 250px;
-            }
-            
-            .content {
-                padding: 20px;
+            .video-caption {
+                font-size: 1rem;
             }
         }
         
