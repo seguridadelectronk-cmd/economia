@@ -304,75 +304,7 @@
         .card-content li {
             margin-bottom: 0.5rem;
         }
-        /* Nueva sección de video */
-        .video-section {
-            background-color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
         
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .video-container video {
-            width: 100%;
-            display: block;
-            border-radius: 12px;
-        }
-        
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            border-radius: 12px;
-        }
-        
-        .video-container:hover .video-overlay {
-            opacity: 1;
-        }
-        
-        .play-button {
-            width: 70px;
-            height: 70px;
-            background-color: var(--color-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.8rem;
-            cursor: pointer;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        
-        .play-button:hover {
-            transform: scale(1.1);
-            background-color: var(--color-secondary);
-        }
-        
-        .video-caption {
-            margin-top: 1.5rem;
-            color: #666;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
         .impact {
             background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
             color: white;
@@ -586,6 +518,7 @@
                 font-size: 1.2rem;
             }
             
+        
             .section-title h2 {
                 font-size: 2.2rem;
             }
@@ -602,26 +535,121 @@
             .cta-form input {
                 width: 100%;
             }
-            .video-container {
-                max-width: 90%;
-            }
             
-            .play-button {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
+        
+            
+        }
+        .video-section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            color: var(--azul);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .video-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-wrapper iframe {
+            width: 100%;
+            height: 450px;
+            display: block;
+            border: none;
+        }
+        
+        .video-info {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .video-title {
+            color: var(--naranja);
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        
+        .video-description {
+            color: var(--gris-oscuro);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .youtube-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #FF0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .youtube-link:hover {
+            background-color: #CC0000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .youtube-link i {
+            margin-right: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--gris-oscuro);
+            color: white;
+        }
+        
+        @media (max-width: 900px) {
+            .video-wrapper iframe {
+                height: 400px;
             }
         }
         
-        @media (max-width: 600px) {
-            .play-button {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
+        @media (max-width: 768px) {
+            .video-wrapper iframe {
+                height: 350px;
             }
             
-            .video-caption {
-                font-size: 1rem;
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .video-title {
+                font-size: 20px;
+            }
+            
+            .video-description {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .video-wrapper iframe {
+                height: 250px;
+            }
+            
+            .content {
+                padding: 20px;
             }
         }
         
@@ -807,30 +835,32 @@
     </section>
 
      <!-- Sección de video después de destinos turísticos -->
-    <section class="video-section" id="video">
-        <div class="container">
-            <div class="section-title">
-                <h2>La Economía Naranja en Acción</h2>
-                <p>Descubre cómo la creatividad y el talento colombiano están transformando la economía del país</p>
-            </div>
-            
-            <div class="video-container">
-                <video id="economiaVideo" controls poster="video-poster.jpg">
-                    <source src="videos\entrevista.mp4" type="video/mp4">
-                    <source src="videos/economia-naranja.webm" type="video/webm">
-                    Tu navegador no soporta la reproducción de videos.
-                </video>
-                
-                <div class="video-overlay">
-                    <div class="play-button" id="playButton">▶</div>
-                </div>
-            </div>
-            
-            <div class="video-caption">
-                <p>Este video muestra cómo la economía naranja está transformando comunidades a través de la creatividad, el arte y la cultura en diferentes regiones de Colombia.</p>
-            </div>
-        </div>
+    <section id="video" class="video-container">
+            <h2 class="section-title">Entrevista realizada al señor hernan silva profersor de percusion.</h2>
     </section>
+            
+            <!-- Aquí va el video de YouTube -->
+    <section id="video" class="video-container">
+            <div class="video-wrapper">
+                <!-- 
+                    PARA INSERTAR TU VIDEO:
+                    1. Sube tu video a YouTube
+                    2. Haz clic en "Compartir" y luego en "Insertar"
+                    3. Copia el código iframe proporcionado
+                    4. Reemplaza el siguiente iframe con el tuyo
+                -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/hCcA5RE00t8?si=Fj__pGnGNewCjlLL"
+                        title="Video sobre Economía Naranja" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+
+            </div>
+            
+
+        </section>
+        
+
 
     <section class="impact" id="impacto">
         <div class="container">
@@ -926,42 +956,6 @@
                 content.classList.toggle('active');
             });
         });
-
-        // Funcionalidad para el reproductor de video
-        const video = document.getElementById('economiaVideo');
-        const playButton = document.getElementById('playButton');
-        const videoOverlay = document.querySelector('.video-overlay');
-        
-        // Reproducir/pausar video al hacer clic en el botón
-        if (playButton) {
-            playButton.addEventListener('click', function() {
-                if (video.paused) {
-                    video.play();
-                    videoOverlay.style.opacity = '0';
-                } else {
-                    video.pause();
-                    videoOverlay.style.opacity = '1';
-                }
-            });
-        }
-        
-        // Mostrar overlay cuando el video se pausa
-        if (video) {
-            video.addEventListener('pause', function() {
-                videoOverlay.style.opacity = '1';
-            });
-            
-            // Ocultar overlay cuando el video se reproduce
-            video.addEventListener('play', function() {
-                videoOverlay.style.opacity = '0';
-            });
-            
-            // Mostrar controles al pasar el mouse por encima en desktop
-            video.addEventListener('mouseover', function() {
-                video.setAttribute('controls', 'true');
-            });
-        }
-        
         
         // Funcionalidad básica para el formulario
         document.querySelector('.cta-form').addEventListener('submit', function(e) {
