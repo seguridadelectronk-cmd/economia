@@ -304,6 +304,194 @@
         .card-content li {
             margin-bottom: 0.5rem;
         }
+        
+        /* Sección de Píldora Fiscal */
+        .pill-section {
+            background-color: #f0f8ff;
+            padding: 5rem 0;
+        }
+        
+        .pill-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .pill-header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .pill-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .pill-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .pill-content {
+            padding: 2rem;
+        }
+        
+        .pill-tabs {
+            display: flex;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .pill-tab {
+            padding: 1rem 2rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .pill-tab.active {
+            color: var(--color-primary);
+            border-bottom: 3px solid var(--color-primary);
+        }
+        
+        .pill-tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .pill-tab-content.active {
+            display: block;
+        }
+        
+        .pill-tab-content h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .policy-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .policy-item {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+        
+        .policy-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .policy-item h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .policy-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .company-case {
+            background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+        }
+        
+        .company-case h3 {
+            color: var(--color-secondary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .company-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .company-logo {
+            width: 100px;
+            height: 100px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        
+        .company-details {
+            flex: 1;
+        }
+        
+        .company-details h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .effects-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .effect-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .effect-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .effect-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+        
+        .effect-item h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.8rem;
+        }
+        
+        .effect-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .positive {
+            border-top: 4px solid var(--color-success);
+        }
+        
+        .negative {
+            border-top: 4px solid var(--color-accent);
+        }
+        
         .video-section {
             margin-bottom: 30px;
         }
@@ -376,39 +564,7 @@
         .youtube-link i {
             margin-right: 8px;
         }
-        @media (max-width: 900px) {
-            .video-wrapper iframe {
-                height: 400px;
-            }
-        }
         
-        @media (max-width: 768px) {
-            .video-wrapper iframe {
-                height: 350px;
-            }
-            
-            .section-title {
-                font-size: 24px;
-            }
-            
-            .video-title {
-                font-size: 20px;
-            }
-            
-            .video-description {
-                font-size: 16px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .video-wrapper iframe {
-                height: 250px;
-            }
-            
-            .content {
-                padding: 20px;
-            }
-        }
         .impact {
             background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
             color: white;
@@ -583,6 +739,60 @@
             font-style: italic;
         }
         
+        @media (max-width: 900px) {
+            .video-wrapper iframe {
+                height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .video-wrapper iframe {
+                height: 350px;
+            }
+            
+            .section-title {
+                font-size: 24px;
+            }
+            
+            .video-title {
+                font-size: 20px;
+            }
+            
+            .video-description {
+                font-size: 16px;
+            }
+            
+            .pill-tabs {
+                flex-direction: column;
+            }
+            
+            .pill-tab {
+                text-align: center;
+                border-bottom: 1px solid #eee;
+                border-left: 3px solid transparent;
+            }
+            
+            .pill-tab.active {
+                border-left: 3px solid var(--color-primary);
+                border-bottom: 1px solid #eee;
+            }
+            
+            .company-info {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .video-wrapper iframe {
+                height: 250px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+        
         @media (max-width: 768px) {
             body {
                 padding-top: 70px;
@@ -674,6 +884,7 @@
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#que-es">¿Qué es?</a></li>
                         <li><a href="#politicas">Políticas</a></li>
+                        <li><a href="#fiscal">Política Fiscal</a></li>
                         <li><a href="#destinos">Destinos</a></li>
                         <li><a href="#impacto">Impacto</a></li>
                         <li><a href="#contacto">Contacto</a></li>
@@ -711,6 +922,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Hero section politicas --> 
     <section id="politicas">
     <div class="container">
@@ -733,6 +945,112 @@
         </div>
     </div>
 </section>
+
+    <!-- Sección de Píldora Fiscal -->
+    <section id="fiscal" class="pill-section">
+        <div class="container">
+            <div class="pill-container">
+                <div class="pill-header">
+                    <h2>Política Fiscal para la Economía Naranja</h2>
+                    <p>Análisis de las medidas actuales y propuestas del gobierno, y sus efectos en las empresas creativas</p>
+                </div>
+                <div class="pill-content">
+                    <div class="pill-tabs">
+                        <div class="pill-tab active" data-tab="actual">Situación Actual</div>
+                        <div class="pill-tab" data-tab="propuestas">Propuestas del Gobierno</div>
+                        <div class="pill-tab" data-tab="efectos">Efectos en Empresas</div>
+                    </div>
+                    
+                    <div class="pill-tab-content active" id="actual">
+                        <h3>Política Fiscal Actual</h3>
+                        <p>La política fiscal actual para la economía naranja en Colombia se basa principalmente en incentivos tributarios y programas de financiamiento establecidos en la Ley Naranja (Ley 1834 de 2017).</p>
+                        
+                        <div class="policy-list">
+                            <div class="policy-item">
+                                <h4>Exenciones Tributarias</h4>
+                                <p>Reducción del impuesto de renta para empresas creativas que reinviertan sus utilidades en proyectos de innovación y desarrollo.</p>
+                            </div>
+                            <div class="policy-item">
+                                <h4>Deducciones Especiales</h4>
+                                <p>Deducción del 165% en el impuesto de renta para inversiones en investigación y desarrollo de proyectos culturales.</p>
+                            </div>
+                            <div class="policy-item">
+                                <h4>IVA Diferencial</h4>
+                                <p>Tasa reducida de IVA (5%) para bienes y servicios culturales como libros, conciertos y obras de teatro.</p>
+                            </div>
+                            <div class="policy-item">
+                                <h4>Financiamiento Preferencial</h4>
+                                <p>Líneas de crédito con tasas de interés preferenciales a través de Bancoldex y el Fondo Emprender.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pill-tab-content" id="propuestas">
+                        <h3>Propuestas del Gobierno</h3>
+                        <p>El gobierno actual ha presentado nuevas propuestas fiscales para fortalecer la economía naranja y adaptarla a los desafíos post-pandemia.</p>
+                        
+                        <div class="policy-list">
+                            <div class="policy-item">
+                                <h4>Régimen Tributario Especial</h4>
+                                <p>Creación de un régimen tributario especial para micro y pequeñas empresas de la economía naranja con ingresos menores a 5.000 UVT.</p>
+                            </div>
+                            <div class="policy-item">
+                                <h4>Crédito Fiscal por Contratación</h4>
+                                <p>Crédito fiscal equivalente al 25% del salario de jóvenes creativos contratados por empresas del sector.</p>
+                            </div>
+                            <div class="policy-item">
+                                <h4>Fondos de Garantía</h4>
+                                <p>Ampliación de fondos de garantía para facilitar el acceso a crédito de empresas culturales sin historial crediticio.</p>
+                            </div>
+                            <div class="policy-item">
+                                <h4>Incentivos a la Exportación</h4>
+                                <p>Devolución del IVA y exención de aranceles para empresas que exporten bienes y servicios culturales.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="pill-tab-content" id="efectos">
+                        <h3>Efectos en una Empresa de la Economía Naranja</h3>
+                        
+                        <div class="company-case">
+                            <div class="company-info">
+                                <div class="company-logo">AC</div>
+                                <div class="company-details">
+                                    <h4>Arte Colombiano S.A.S.</h4>
+                                    <p>Empresa dedicada a la producción y comercialización de artesanías colombianas con diseños contemporáneos. Cuenta con 25 empleados y exporta a 12 países.</p>
+                                </div>
+                            </div>
+                            
+                            <h3>Impacto de las Políticas Fiscales</h3>
+                            <div class="effects-list">
+                                <div class="effect-item positive">
+                                    <div class="effect-icon">📈</div>
+                                    <h4>Aumento de Inversión</h4>
+                                    <p>Las exenciones tributarias han permitido reinvertir el 30% de las utilidades en nuevos diseños y tecnología.</p>
+                                </div>
+                                <div class="effect-item positive">
+                                    <div class="effect-icon">💼</div>
+                                    <h4>Creación de Empleo</h4>
+                                    <p>Los incentivos a la contratación han facilitado la incorporación de 8 nuevos diseñadores jóvenes.</p>
+                                </div>
+                                <div class="effect-item positive">
+                                    <div class="effect-icon">🌎</div>
+                                    <h4>Expansión Internacional</h4>
+                                    <p>Los beneficios a la exportación han reducido costos y permitido ingresar a 3 nuevos mercados.</p>
+                                </div>
+                                <div class="effect-item negative">
+                                    <div class="effect-icon">📋</div>
+                                    <h4>Complejidad Administrativa</h4>
+                                    <p>El cumplimiento de requisitos para acceder a beneficios implica carga administrativa adicional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="destinations" id="destinos">
         <div class="container">
             <div class="section-title">
@@ -886,34 +1204,30 @@
                 </iframe>
 
             </div>
-            
-
-        </section>
-        
-
+    </section>
 
     <section class="impact" id="impacto">
         <div class="container">
             <div class="section-title">
                 <h2>Impacto de la Economía Naranja</h2>
-                <p>Descubre cómo las industrias creativas están transformando la economía colombiana.</p>
+                <p>La economía naranja está transformando el panorama económico y social de Colombia</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
                     <div class="stat-number">6.1%</div>
-                    <p>del PIB nacional es generado por la economía naranja</p>
+                    <p>del PIB nacional es generado por las industrias creativas</p>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">600k+</div>
-                    <p>empleos directos creados por las industrias creativas</p>
+                    <div class="stat-number">700.000+</div>
+                    <p>empleos directos generados en el sector cultural y creativo</p>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">12%</div>
-                    <p>crecimiento anual promedio del sector</p>
+                    <div class="stat-number">32%</div>
+                    <p>de crecimiento en exportaciones de servicios creativos en los últimos 5 años</p>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">30%</div>
-                    <p>de las exportaciones culturales de Latinoamérica son colombianas</p>
+                    <div class="stat-number">1.200</div>
+                    <p>empresas beneficiadas con incentivos fiscales de la Ley Naranja</p>
                 </div>
             </div>
         </div>
@@ -922,12 +1236,12 @@
     <section class="cta" id="contacto">
         <div class="container">
             <div class="section-title">
-                <h2>¿Te interesa conocer más?</h2>
-                <p>Suscríbete a nuestro newsletter para recibir información actualizada sobre economía naranja en Colombia.</p>
+                <h2>¿Quieres saber más sobre la Economía Naranja?</h2>
+                <p>Suscríbete a nuestro boletín para recibir información actualizada sobre políticas, eventos y oportunidades en el sector creativo colombiano.</p>
             </div>
             <div class="cta-form">
-                <input type="email" placeholder="Tu correo electrónico" required>
-                <button type="submit" class="btn">Suscribirse</button>
+                <input type="email" placeholder="Tu correo electrónico">
+                <a href="#" class="btn">Suscribirse</a>
             </div>
         </div>
     </section>
@@ -937,79 +1251,98 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Economía Naranja Colombia</h3>
-                    <p>Descubre el potencial creativo de Colombia y cómo está transformando la economía del país.</p>
+                    <p>Promoviendo el desarrollo económico a través de la creatividad y la cultura en los destinos turísticos más emblemáticos del país.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f">f</i></a>
+                        <a href="#"><i class="fab fa-twitter">t</i></a>
+                        <a href="#"><i class="fab fa-instagram">i</i></a>
+                        <a href="#"><i class="fab fa-linkedin-in">in</i></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Enlaces rápidos</h3>
+                    <h3>Enlaces Rápidos</h3>
                     <ul class="footer-links">
                         <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#que-es">¿Qué es?</a></li>
-                        <li><a href="#politicas">Políticas</a></li>
-                        <li><a href="#destinos">Destinos</a></li>
-                        <li><a href="#impacto">Impacto</a></li>
+                        <li><a href="#que-es">¿Qué es la Economía Naranja?</a></li>
+                        <li><a href="#politicas">Políticas Públicas</a></li>
+                        <li><a href="#fiscal">Política Fiscal</a></li>
+                        <li><a href="#destinos">Destinos Turísticos</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-envelope"></i> Email: eesteban@ucundinamarca.edu.co</li>
-                        <li><i class="fas fa-phone"></i> Teléfono: +57 324 800 7048</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Dirección: Silvania, Cundinamarca, Colombia</li>
+                        <li><a href="mailto:info@economianaranja.co">info@economianaranja.co</a></li>
+                        <li><a href="tel:+573001234567">+57 300 123 4567</a></li>
+                        <li>Bogotá, Colombia</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
                 <p>&copy; 2023 Economía Naranja Colombia. Todos los derechos reservados.</p>
-                <p>Elaborado por Edith Magaly Esteban Diaz</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Funcionalidad para mostrar/ocultar información al hacer clic
-        document.querySelectorAll('.destination-card').forEach(card => {
-            card.addEventListener('click', function() {
-                // Cerrar otros cards abiertos
-                document.querySelectorAll('.card-content').forEach(content => {
-                    if (content !== this.querySelector('.card-content') && content.classList.contains('active')) {
-                        content.classList.remove('active');
+        // Script para las pestañas de la píldora fiscal
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.pill-tab');
+            const tabContents = document.querySelectorAll('.pill-tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remover clase active de todas las pestañas y contenidos
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Agregar clase active a la pestaña clickeada
+                    tab.classList.add('active');
+                    
+                    // Mostrar el contenido correspondiente
+                    const tabId = tab.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Script para las tarjetas de destinos
+            const destinationCards = document.querySelectorAll('.destination-card');
+            
+            destinationCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Si ya está activa, cerrarla
+                    if (this.classList.contains('active')) {
+                        this.classList.remove('active');
+                        this.querySelector('.card-content').classList.remove('active');
+                    } else {
+                        // Cerrar todas las demás tarjetas
+                        destinationCards.forEach(c => {
+                            c.classList.remove('active');
+                            c.querySelector('.card-content').classList.remove('active');
+                        });
+                        
+                        // Abrir esta tarjeta
+                        this.classList.add('active');
+                        this.querySelector('.card-content').classList.add('active');
                     }
                 });
-                
-                // Abrir/cerrar el card actual
-                const content = this.querySelector('.card-content');
-                content.classList.toggle('active');
             });
-        });
-        
-        // Funcionalidad básica para el formulario
-        document.querySelector('.cta-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
-            alert(`¡Gracias por suscribirte con el correo: ${email}! Te mantendremos informado sobre la economía naranja.`);
-            this.reset();
-        });
-        
-        // Smooth scrolling para los enlaces del menú
-        document.querySelectorAll('nav a, .btn').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Ajuste para el header fijo
-                    behavior: 'smooth'
+            
+            // Smooth scroll para los enlaces del menú
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
     </script>
 </body>
 </html>
-
-
