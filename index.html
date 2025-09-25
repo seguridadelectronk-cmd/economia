@@ -491,7 +491,7 @@
         .negative {
             border-top: 4px solid var(--color-accent);
         }
-        
+        /* Section for Video Content */
         .video-section {
             margin-bottom: 30px;
         }
@@ -871,6 +871,186 @@
             }
         }
         
+        /* Sección de diapositivas */
+        .slides-section {
+            padding: 5rem 0;
+            background-color: #f0f8ff;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--color-secondary);
+            margin-bottom: 1.2rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60%;
+            height: 4px;
+            background: var(--color-primary);
+            bottom: -12px;
+            left: 20%;
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        .slides-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .slide {
+            min-width: 100%;
+            padding: 3rem;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--color-primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .slide h3 {
+            font-size: 2rem;
+            color: var(--color-secondary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .slide-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .slide-text {
+            flex: 1;
+        }
+        
+        .slide-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .slide-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .slide-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slide-list {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .slide-list li {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        
+        .slide-highlight {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+        
+        .slide-highlight h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .slides-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            gap: 1rem;
+        }
+        
+        .slide-btn {
+            background: var(--color-primary);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-btn:hover {
+            background: var(--color-secondary);
+            transform: scale(1.1);
+        }
+        
+        .slide-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .dot.active {
+            background: var(--color-primary);
+            transform: scale(1.2);
+        }
+        
     </style>
 </head>
 <body>
@@ -1050,7 +1230,7 @@
             </div>
         </div>
     </section>
-
+    <!-- Sección de Destinos Turísticos -->
     <section class="destinations" id="destinos">
         <div class="container">
             <div class="section-title">
@@ -1205,6 +1385,164 @@
 
             </div>
     </section>
+     <!-- Sección de diapositivas -->
+    <section id="diapositivas" class="slides-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Política Fiscal de la Economía Naranja</h2>
+                <p>Análisis de la estructura tributaria y propuestas para fortalecer las industrias creativas en Colombia</p>
+            </div>
+            
+            <div class="slides-container">
+                <div class="slides">
+                    <!-- Diapositiva 1 -->
+                    <div class="slide">
+                        <div class="slide-number">1</div>
+                        <h3>Definición de Política Fiscal</h3>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <p>La política fiscal se refiere al uso del <strong>gasto público</strong> y la <strong>recaudación de impuestos</strong> para influir en la economía. En el contexto de la economía naranja, estas herramientas buscan fomentar las industrias creativas y culturales.</p>
+                                <p>En Colombia, la política fiscal para la economía naranja se materializa a través de:</p>
+                                <ul class="slide-list">
+                                    <li>Incentivos tributarios específicos para el sector creativo</li>
+                                    <li>Programas de financiamiento y apoyo gubernamental</li>
+                                    <li>Exenciones y deducciones fiscales para empresas culturales</li>
+                                    <li>Inversión pública en infraestructura cultural</li>
+                                </ul>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Política fiscal">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diapositiva 2 -->
+                    <div class="slide">
+                        <div class="slide-number">2</div>
+                        <h3>Panorama Tributario en Colombia</h3>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <p>La estructura tributaria colombiana se compone de <strong>impuestos directos</strong> (sobre la renta, patrimonio) e <strong>indirectos</strong> (IVA, impuestos al consumo).</p>
+                                <p>En los últimos años, Colombia ha enfrentado un <strong>déficit fiscal</strong> que ha llevado a la implementación de reformas tributarias buscando aumentar la recaudación.</p>
+                                <div class="slide-highlight">
+                                    <h4>Reformas Recientes</h4>
+                                    <p>La Ley de Financiamiento (2018) y la Ley de Crecimiento Económico (2019) introdujeron cambios significativos en el sistema tributario, afectando directamente a las empresas de la economía naranja.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Estructura tributaria">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diapositiva 3 -->
+                    <div class="slide">
+                        <div class="slide-number">3</div>
+                        <h3>Fortalecimiento del Sistema Tributario</h3>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <p>Para fortalecer el sistema tributario en relación con la economía naranja, se requieren medidas específicas que reconozcan las particularidades de las industrias creativas.</p>
+                                <ul class="slide-list">
+                                    <li><strong>Simplificación administrativa:</strong> Reducir la carga burocrática para emprendimientos culturales</li>
+                                    <li><strong>Incentivos focalizados:</strong> Beneficios tributarios para empresas que inviertan en I+D cultural</li>
+                                    <li><strong>Formalización:</strong> Facilitar la transición de la informalidad a la formalidad</li>
+                                    <li><strong>Capacitación:</strong> Programas de educación fiscal para el sector creativo</li>
+                                </ul>
+                                <p>Estas medidas buscan crear un entorno favorable para el crecimiento sostenible de la economía naranja.</p>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Fortalecimiento tributario">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diapositiva 4 -->
+                    <div class="slide">
+                        <div class="slide-number">4</div>
+                        <h3>Régimenes Tributarios Especiales</h3>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <p>Colombia ha establecido regímenes tributarios especiales para apoyar a las empresas de la economía naranja:</p>
+                                <ul class="slide-list">
+                                    <li><strong>Ley Naranja (1834 de 2017):</strong> Establece beneficios tributarios para industrias culturales y creativas</li>
+                                    <li><strong>Régimen Simple de Tributación:</strong> Simplifica obligaciones para pequeños contribuyentes</li>
+                                    <li><strong>Zonas Francas Culturales:</strong> Beneficios para empresas ubicadas en zonas designadas</li>
+                                    <li><strong>Deducción por inversión en cultura:</strong> Hasta el 165% del valor invertido</li>
+                                </ul>
+                                <div class="slide-highlight">
+                                    <h4>Beneficios Específicos</h4>
+                                    <p>Exención de IVA para libros, impresos y eventos culturales; tarifas preferenciales de impuesto de renta; y deducciones por donaciones a proyectos culturales.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Régimenes tributarios">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diapositiva 5 -->
+                    <div class="slide">
+                        <div class="slide-number">5</div>
+                        <h3>Propuestas de Soluciones</h3>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <p>Para mejorar la política fiscal dirigida a la economía naranja, se proponen las siguientes soluciones:</p>
+                                <ul class="slide-list">
+                                    <li><strong>Créditos fiscales:</strong> Por contratación de talento joven en industrias creativas</li>
+                                    <li><strong>Fondos de garantía:</strong> Para facilitar el acceso a crédito de empresas culturales</li>
+                                    <li><strong>Simplificación de trámites:</strong> Ventanillas únicas para emprendimientos culturales</li>
+                                    <li><strong>Incentivos a la exportación:</strong> Devolución de IVA para bienes y servicios culturales exportados</li>
+                                    <li><strong>Programas de capacitación:</strong> En gestión empresarial para el sector creativo</li>
+                                </ul>
+                                <p>Estas propuestas buscan crear un ecosistema favorable para el desarrollo de la economía naranja en Colombia.</p>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Soluciones">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diapositiva 6 -->
+                    <div class="slide">
+                        <div class="slide-number">6</div>
+                        <h3>Programas y Entidades de Apoyo</h3>
+                        <div class="slide-content">
+                            <div class="slide-text">
+                                <p>Existen diversas entidades y programas que apoyan el desarrollo de la economía naranja en Colombia:</p>
+                                <ul class="slide-list">
+                                    <li><strong>Ministerio de Cultura:</strong> Lidera las políticas culturales y creativas</li>
+                                    <li><strong>Bancoldex:</strong> Ofrece líneas de crédito especializadas</li>
+                                    <li><strong>iNNpulsa Colombia:</strong> Apoya emprendimientos innovadores</li>
+                                    <li><strong>Fondo Emprender:</strong> Financia ideas de negocio creativas</li>
+                                    <li><strong>ProColombia:</strong> Promueve la internacionalización</li>
+                                </ul>
+                                <div class="slide-highlight">
+                                    <h4>Programas Específicos</h4>
+                                    <p>Crea Digital, Economía Naranja, Cine Colombia, y diversos fondos concursables para proyectos culturales y creativos.</p>
+                                </div>
+                            </div>
+                            <div class="slide-image">
+                                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Entidades de apoyo">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slides-controls">
+                    <button class="slide-btn prev-btn">‹</button>
+                    <div class="slide-dots">
+                        <div class="dot active" data-slide="0"></div>
+                        <div class="dot" data-slide="1"></div>
+                        <div class="dot" data-slide="2"></div>
+                        <div class="dot" data-slide="3"></div>
+                        <div class="dot" data-slide="4"></div>
+                        <div class="dot" data-slide="5"></div>
+                    </div>
+                    <button class="slide-btn next-btn">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="impact" id="impacto">
         <div class="container">
@@ -1251,35 +1589,37 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Economía Naranja Colombia</h3>
-                    <p>Promoviendo el desarrollo económico a través de la creatividad y la cultura en los destinos turísticos más emblemáticos del país.</p>
+                    <p>Descubre el potencial creativo de Colombia y cómo está transformando la economía del país.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f">f</i></a>
-                        <a href="#"><i class="fab fa-twitter">t</i></a>
-                        <a href="#"><i class="fab fa-instagram">i</i></a>
-                        <a href="#"><i class="fab fa-linkedin-in">in</i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h3>Enlaces Rápidos</h3>
+                    <h3>Enlaces rápidos</h3>
                     <ul class="footer-links">
                         <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#que-es">¿Qué es la Economía Naranja?</a></li>
-                        <li><a href="#politicas">Políticas Públicas</a></li>
+                        <li><a href="#que-es">¿Qué es?</a></li>
+                        <li><a href="#politicas">Políticas</a></li>
                         <li><a href="#fiscal">Política Fiscal</a></li>
-                        <li><a href="#destinos">Destinos Turísticos</a></li>
+                        <li><a href="#destinos">Destinos</a></li>
+                        <li><a href="#impacto">Impacto</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Contacto</h3>
                     <ul class="footer-links">
-                        <li><a href="mailto:info@economianaranja.co">info@economianaranja.co</a></li>
-                        <li><a href="tel:+573001234567">+57 300 123 4567</a></li>
-                        <li>Bogotá, Colombia</li>
+                        <li><i class="fas fa-envelope"></i> Email: eesteban@ucundinamarca.edu.co</li>
+                        <li><i class="fas fa-phone"></i> Teléfono: +57 324 800 7048</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dirección: Silvania, Cundinamarca, Colombia</li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
                 <p>&copy; 2023 Economía Naranja Colombia. Todos los derechos reservados.</p>
+                <p>Elaborado por Edith Magaly Esteban Diaz</p>
             </div>
         </div>
     </footer>
@@ -1327,6 +1667,88 @@
                     }
                 });
             });
+// Funcionalidad del carrusel de diapositivas
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.slides');
+            const slideCount = document.querySelectorAll('.slide').length;
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentSlide = 0;
+            
+            // Función para actualizar la posición del carrusel
+            function updateSlidePosition() {
+                slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Actualizar puntos de navegación
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            // Event listeners para botones de navegación
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide > 0) ? currentSlide - 1 : slideCount - 1;
+                updateSlidePosition();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+                updateSlidePosition();
+            });
+            
+            // Event listeners para puntos de navegación
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    currentSlide = index;
+                    updateSlidePosition();
+                });
+            });
+            
+            // Navegación con teclado
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    currentSlide = (currentSlide > 0) ? currentSlide - 1 : slideCount - 1;
+                    updateSlidePosition();
+                } else if (e.key === 'ArrowRight') {
+                    currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+                    updateSlidePosition();
+                }
+            });
+            
+            // Navegación suave para enlaces del menú
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Cambio automático de diapositivas cada 10 segundos
+            setInterval(function() {
+                currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+                updateSlidePosition();
+            }, 10000);
+        });
+            // Navegación con teclado
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    currentSlide = (currentSlide > 0) ? currentSlide - 1 : slideCount - 1;
+                    updateSlidePosition();
+                } else if (e.key === 'ArrowRight') {
+                     currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+                    updateSlidePosition();
+                }
+            });
+            
             
             // Smooth scroll para los enlaces del menú
             document.querySelectorAll('nav a').forEach(anchor => {
@@ -1342,6 +1764,80 @@
                     });
                 });
             });
+        });
+        
+    </script>
+    <script>
+        // Funcionalidad del carrusel de diapositivas
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelector('.slides');
+            const slideCount = document.querySelectorAll('.slide').length;
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentSlide = 0;
+            
+            // Función para actualizar la posición del carrusel
+            function updateSlidePosition() {
+                slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+                
+                // Actualizar puntos de navegación
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            // Event listeners para botones de navegación
+            prevBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide > 0) ? currentSlide - 1 : slideCount - 1;
+                updateSlidePosition();
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+                updateSlidePosition();
+            });
+            
+            // Event listeners para puntos de navegación
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    currentSlide = index;
+                    updateSlidePosition();
+                });
+            });
+            
+            // Navegación con teclado
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    currentSlide = (currentSlide > 0) ? currentSlide - 1 : slideCount - 1;
+                    updateSlidePosition();
+                } else if (e.key === 'ArrowRight') {
+                    currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+                    updateSlidePosition();
+                }
+            });
+            
+            // Navegación suave para enlaces del menú
+            document.querySelectorAll('nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Cambio automático de diapositivas cada 10 segundos
+            setInterval(function() {
+                currentSlide = (currentSlide < slideCount - 1) ? currentSlide + 1 : 0;
+                updateSlidePosition();
+            }, 10000);
         });
     </script>
 </body>
